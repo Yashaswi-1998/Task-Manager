@@ -94,7 +94,7 @@ userSchema.statics.matchEmail=async function(email,password)
   var user  
 
          user= await this.findOne({ email:email})
-        console.log(user)
+       // console.log(user)
         if(!user)
         {   console.log('inside try if')
             throw new Error("Email did not match")

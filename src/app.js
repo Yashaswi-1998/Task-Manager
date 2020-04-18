@@ -1,5 +1,3 @@
-//we can also export app.js and remove below code except line 10 and 16
-
 const express=require('express')
 require('./db/mongoose')
 
@@ -8,13 +6,11 @@ const taskRouter=require('./routers/task')
  
 
 const app=express()
-const  port=process.env.PORT
+
 
 app.use(express.json())
 app.use(userRouter)
 app.use(taskRouter)
 
-app.listen(port,()=>{
-    console.log('server is up on port '+port)
-})
+module.exports=app
 

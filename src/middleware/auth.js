@@ -21,7 +21,7 @@ const auth= async (req,res,next)=>{
 
          next()
     }catch(e){
-        console.log("gjvjb`")
+       // console.log("gjvjb`")
         res.status(400).send(e.toString())
     }
 
